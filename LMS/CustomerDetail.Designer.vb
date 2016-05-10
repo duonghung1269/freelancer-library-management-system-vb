@@ -19,23 +19,23 @@ Partial Class CustomerDetail
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListView1 = New System.Windows.Forms.ListView
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.CustomerDetailListView = New System.Windows.Forms.ListView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ListView1
+        'CustomerDetailListView
         '
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(10, 80)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(684, 290)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.CustomerDetailListView.FullRowSelect = True
+        Me.CustomerDetailListView.GridLines = True
+        Me.CustomerDetailListView.Location = New System.Drawing.Point(10, 80)
+        Me.CustomerDetailListView.MultiSelect = False
+        Me.CustomerDetailListView.Name = "CustomerDetailListView"
+        Me.CustomerDetailListView.Size = New System.Drawing.Size(684, 290)
+        Me.CustomerDetailListView.TabIndex = 0
+        Me.CustomerDetailListView.UseCompatibleStateImageBehavior = False
+        Me.CustomerDetailListView.View = System.Windows.Forms.View.Details
         '
         'Label1
         '
@@ -68,11 +68,12 @@ Partial Class CustomerDetail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.LMS.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(704, 381)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.CustomerDetailListView)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "CustomerDetail"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -81,7 +82,7 @@ Partial Class CustomerDetail
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents CustomerDetailListView As System.Windows.Forms.ListView
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button

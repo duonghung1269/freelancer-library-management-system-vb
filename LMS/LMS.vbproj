@@ -163,11 +163,29 @@
     <Compile Include="BookDetail.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BooksLandingForm.Designer.vb">
+      <DependentUpon>BooksLandingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BooksLandingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Class1.vb" />
     <Compile Include="CustomerDetail.Designer.vb">
       <DependentUpon>CustomerDetail.vb</DependentUpon>
     </Compile>
     <Compile Include="CustomerDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersLandingForm.Designer.vb">
+      <DependentUpon>CustomersLandingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersLandingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomesReport.Designer.vb">
+      <DependentUpon>CustomesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomesReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GroupID.Designer.vb">
@@ -210,6 +228,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReportsLandingForm.Designer.vb">
+      <DependentUpon>ReportsLandingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsLandingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReturnBook.Designer.vb">
       <DependentUpon>ReturnBook.vb</DependentUpon>
     </Compile>
@@ -243,9 +267,18 @@
       <SubType>Designer</SubType>
       <DependentUpon>BookDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BooksLandingForm.resx">
+      <DependentUpon>BooksLandingForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerDetail.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CustomerDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersLandingForm.resx">
+      <DependentUpon>CustomersLandingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomesReport.resx">
+      <DependentUpon>CustomesReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupID.resx">
       <SubType>Designer</SubType>
@@ -267,6 +300,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsLandingForm.resx">
+      <DependentUpon>ReportsLandingForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReturnBook.resx">
       <SubType>Designer</SubType>
@@ -291,6 +327,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\customer_report.png" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\membership_report.jpg" />
+    <None Include="Resources\rented_book.jpg" />
+    <None Include="Resources\search_customer.jpg" />
+    <None Include="Resources\add_customer.png" />
+    <None Include="Resources\add_group.jpg" />
+    <None Include="Resources\add_book.jpg" />
+    <None Include="Resources\return_book.png" />
+    <None Include="Resources\issue_book.png" />
+    <None Include="Resources\add_icon.jpg" />
     <None Include="Resources\report_image.gif" />
     <None Include="Resources\books_icon.jpg" />
     <None Include="Resources\Customer-Icon.jpg" />

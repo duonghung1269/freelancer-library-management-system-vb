@@ -19,71 +19,71 @@ Partial Class IssueBook
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox
-        Me.TextBox6 = New System.Windows.Forms.TextBox
-        Me.TextBox5 = New System.Windows.Forms.TextBox
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox
-        Me.TextBox4 = New System.Windows.Forms.TextBox
-        Me.TextBox3 = New System.Windows.Forms.TextBox
-        Me.TextBox2 = New System.Windows.Forms.TextBox
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Button9 = New System.Windows.Forms.Button
-        Me.Button8 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button6 = New System.Windows.Forms.Button
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox
-        Me.ListView1 = New System.Windows.Forms.ListView
+        Me.cbbPublishYear = New System.Windows.Forms.ComboBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cbbStatus = New System.Windows.Forms.ComboBox()
+        Me.tbPrice = New System.Windows.Forms.TextBox()
+        Me.tbEdition = New System.Windows.Forms.TextBox()
+        Me.cbbGroupId = New System.Windows.Forms.ComboBox()
+        Me.tbAuthor = New System.Windows.Forms.TextBox()
+        Me.tbPublisher = New System.Windows.Forms.TextBox()
+        Me.tbBookName = New System.Windows.Forms.TextBox()
+        Me.cbbBookId = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.tbCustomerName = New System.Windows.Forms.TextBox()
+        Me.cbbCustomerId = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.IssueBooksListView = New System.Windows.Forms.ListView()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ComboBox3
+        'cbbPublishYear
         '
-        Me.ComboBox3.Enabled = False
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Available", "Rented"})
-        Me.ComboBox3.Location = New System.Drawing.Point(180, 190)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ComboBox3.Size = New System.Drawing.Size(158, 21)
-        Me.ComboBox3.TabIndex = 11
+        Me.cbbPublishYear.Enabled = False
+        Me.cbbPublishYear.FormattingEnabled = True
+        Me.cbbPublishYear.Items.AddRange(New Object() {"Available", "Rented"})
+        Me.cbbPublishYear.Location = New System.Drawing.Point(180, 190)
+        Me.cbbPublishYear.Name = "cbbPublishYear"
+        Me.cbbPublishYear.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cbbPublishYear.Size = New System.Drawing.Size(158, 21)
+        Me.cbbPublishYear.TabIndex = 11
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.ComboBox4)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.cbbStatus)
+        Me.GroupBox1.Controls.Add(Me.cbbPublishYear)
+        Me.GroupBox1.Controls.Add(Me.tbPrice)
+        Me.GroupBox1.Controls.Add(Me.tbEdition)
+        Me.GroupBox1.Controls.Add(Me.cbbGroupId)
+        Me.GroupBox1.Controls.Add(Me.tbAuthor)
+        Me.GroupBox1.Controls.Add(Me.tbPublisher)
+        Me.GroupBox1.Controls.Add(Me.tbBookName)
+        Me.GroupBox1.Controls.Add(Me.cbbBookId)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -100,79 +100,79 @@ Partial Class IssueBook
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "BOOKS DETAIL"
         '
-        'ComboBox4
+        'cbbStatus
         '
-        Me.ComboBox4.Enabled = False
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(499, 90)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ComboBox4.Size = New System.Drawing.Size(158, 21)
-        Me.ComboBox4.TabIndex = 14
+        Me.cbbStatus.Enabled = False
+        Me.cbbStatus.FormattingEnabled = True
+        Me.cbbStatus.Location = New System.Drawing.Point(499, 90)
+        Me.cbbStatus.Name = "cbbStatus"
+        Me.cbbStatus.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cbbStatus.Size = New System.Drawing.Size(158, 21)
+        Me.cbbStatus.TabIndex = 14
         '
-        'TextBox6
+        'tbPrice
         '
-        Me.TextBox6.Location = New System.Drawing.Point(500, 61)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox6.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox6.TabIndex = 13
+        Me.tbPrice.Location = New System.Drawing.Point(500, 61)
+        Me.tbPrice.Name = "tbPrice"
+        Me.tbPrice.ReadOnly = True
+        Me.tbPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbPrice.Size = New System.Drawing.Size(158, 20)
+        Me.tbPrice.TabIndex = 13
         '
-        'TextBox5
+        'tbEdition
         '
-        Me.TextBox5.Location = New System.Drawing.Point(500, 28)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox5.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox5.TabIndex = 12
+        Me.tbEdition.Location = New System.Drawing.Point(500, 28)
+        Me.tbEdition.Name = "tbEdition"
+        Me.tbEdition.ReadOnly = True
+        Me.tbEdition.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbEdition.Size = New System.Drawing.Size(158, 20)
+        Me.tbEdition.TabIndex = 12
         '
-        'ComboBox2
+        'cbbGroupId
         '
-        Me.ComboBox2.Enabled = False
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(180, 61)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ComboBox2.Size = New System.Drawing.Size(158, 21)
-        Me.ComboBox2.TabIndex = 7
+        Me.cbbGroupId.Enabled = False
+        Me.cbbGroupId.FormattingEnabled = True
+        Me.cbbGroupId.Location = New System.Drawing.Point(180, 61)
+        Me.cbbGroupId.Name = "cbbGroupId"
+        Me.cbbGroupId.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cbbGroupId.Size = New System.Drawing.Size(158, 21)
+        Me.cbbGroupId.TabIndex = 7
         '
-        'TextBox4
+        'tbAuthor
         '
-        Me.TextBox4.Location = New System.Drawing.Point(180, 160)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox4.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox4.TabIndex = 10
+        Me.tbAuthor.Location = New System.Drawing.Point(180, 160)
+        Me.tbAuthor.Name = "tbAuthor"
+        Me.tbAuthor.ReadOnly = True
+        Me.tbAuthor.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbAuthor.Size = New System.Drawing.Size(158, 20)
+        Me.tbAuthor.TabIndex = 10
         '
-        'TextBox3
+        'tbPublisher
         '
-        Me.TextBox3.Location = New System.Drawing.Point(180, 126)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox3.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.tbPublisher.Location = New System.Drawing.Point(180, 126)
+        Me.tbPublisher.Name = "tbPublisher"
+        Me.tbPublisher.ReadOnly = True
+        Me.tbPublisher.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbPublisher.Size = New System.Drawing.Size(158, 20)
+        Me.tbPublisher.TabIndex = 9
         '
-        'TextBox2
+        'tbBookName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(180, 94)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox2.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.tbBookName.Location = New System.Drawing.Point(180, 94)
+        Me.tbBookName.Name = "tbBookName"
+        Me.tbBookName.ReadOnly = True
+        Me.tbBookName.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbBookName.Size = New System.Drawing.Size(158, 20)
+        Me.tbBookName.TabIndex = 8
         '
-        'ComboBox1
+        'cbbBookId
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(180, 31)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ComboBox1.Size = New System.Drawing.Size(158, 21)
-        Me.ComboBox1.TabIndex = 6
+        Me.cbbBookId.FormattingEnabled = True
+        Me.cbbBookId.Location = New System.Drawing.Point(180, 31)
+        Me.cbbBookId.Name = "cbbBookId"
+        Me.cbbBookId.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cbbBookId.Size = New System.Drawing.Size(158, 21)
+        Me.cbbBookId.TabIndex = 6
         '
         'Label9
         '
@@ -268,8 +268,8 @@ Partial Class IssueBook
         '
         Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Controls.Add(Me.ComboBox5)
+        Me.GroupBox2.Controls.Add(Me.tbCustomerName)
+        Me.GroupBox2.Controls.Add(Me.cbbCustomerId)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label12)
@@ -297,22 +297,22 @@ Partial Class IssueBook
         Me.DateTimePicker1.Size = New System.Drawing.Size(158, 20)
         Me.DateTimePicker1.TabIndex = 20
         '
-        'TextBox1
+        'tbCustomerName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(180, 58)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox1.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox1.TabIndex = 19
+        Me.tbCustomerName.Location = New System.Drawing.Point(180, 58)
+        Me.tbCustomerName.Name = "tbCustomerName"
+        Me.tbCustomerName.ReadOnly = True
+        Me.tbCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbCustomerName.Size = New System.Drawing.Size(158, 20)
+        Me.tbCustomerName.TabIndex = 19
         '
-        'ComboBox5
+        'cbbCustomerId
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(180, 25)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(158, 21)
-        Me.ComboBox5.TabIndex = 18
+        Me.cbbCustomerId.FormattingEnabled = True
+        Me.cbbCustomerId.Location = New System.Drawing.Point(180, 25)
+        Me.cbbCustomerId.Name = "cbbCustomerId"
+        Me.cbbCustomerId.Size = New System.Drawing.Size(158, 21)
+        Me.cbbCustomerId.TabIndex = 18
         '
         'Label14
         '
@@ -432,23 +432,24 @@ Partial Class IssueBook
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "MOVES"
         '
-        'ListView1
+        'IssueBooksListView
         '
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(23, 373)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(697, 98)
-        Me.ListView1.TabIndex = 14
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.IssueBooksListView.FullRowSelect = True
+        Me.IssueBooksListView.GridLines = True
+        Me.IssueBooksListView.Location = New System.Drawing.Point(23, 373)
+        Me.IssueBooksListView.Name = "IssueBooksListView"
+        Me.IssueBooksListView.Size = New System.Drawing.Size(697, 98)
+        Me.IssueBooksListView.TabIndex = 14
+        Me.IssueBooksListView.UseCompatibleStateImageBehavior = False
+        Me.IssueBooksListView.View = System.Windows.Forms.View.Details
         '
         'IssueBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.LMS.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(751, 551)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.IssueBooksListView)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
@@ -466,15 +467,15 @@ Partial Class IssueBook
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbbPublishYear As System.Windows.Forms.ComboBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents tbPrice As System.Windows.Forms.TextBox
+    Friend WithEvents tbEdition As System.Windows.Forms.TextBox
+    Friend WithEvents cbbGroupId As System.Windows.Forms.ComboBox
+    Friend WithEvents tbAuthor As System.Windows.Forms.TextBox
+    Friend WithEvents tbPublisher As System.Windows.Forms.TextBox
+    Friend WithEvents tbBookName As System.Windows.Forms.TextBox
+    Friend WithEvents cbbBookId As System.Windows.Forms.ComboBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
@@ -484,7 +485,7 @@ Partial Class IssueBook
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbbStatus As System.Windows.Forms.ComboBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
@@ -492,8 +493,8 @@ Partial Class IssueBook
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
+    Friend WithEvents tbCustomerName As System.Windows.Forms.TextBox
+    Friend WithEvents cbbCustomerId As System.Windows.Forms.ComboBox
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
@@ -502,5 +503,5 @@ Partial Class IssueBook
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents IssueBooksListView As System.Windows.Forms.ListView
 End Class

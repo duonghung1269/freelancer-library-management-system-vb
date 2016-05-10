@@ -19,7 +19,7 @@ Partial Class AllRented
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListView1 = New System.Windows.Forms.ListView
+        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
         '
         'ListView1
@@ -37,6 +37,7 @@ Partial Class AllRented
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.LMS.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(648, 302)
         Me.Controls.Add(Me.ListView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

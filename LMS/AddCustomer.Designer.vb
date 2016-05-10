@@ -26,13 +26,13 @@ Partial Class AddCustomer
         Me.Label5 = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.TextBox2 = New System.Windows.Forms.TextBox
-        Me.TextBox3 = New System.Windows.Forms.TextBox
-        Me.TextBox4 = New System.Windows.Forms.TextBox
+        Me.tbCustomerId = New System.Windows.Forms.TextBox
+        Me.tbName = New System.Windows.Forms.TextBox
+        Me.tbCustomerAddress = New System.Windows.Forms.TextBox
+        Me.tbContact = New System.Windows.Forms.TextBox
         Me.TextBox5 = New System.Windows.Forms.TextBox
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
+        Me.dtpActivationDate = New System.Windows.Forms.DateTimePicker
+        Me.dtpValidTill = New System.Windows.Forms.DateTimePicker
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
         Me.Button9 = New System.Windows.Forms.Button
         Me.Button8 = New System.Windows.Forms.Button
@@ -41,7 +41,7 @@ Partial Class AddCustomer
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
         Me.Button6 = New System.Windows.Forms.Button
         Me.Button5 = New System.Windows.Forms.Button
-        Me.ListView1 = New System.Windows.Forms.ListView
+        Me.addCustomerListView = New System.Windows.Forms.ListView
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -118,46 +118,46 @@ Partial Class AddCustomer
         '
         'TextBox1
         '
-        Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(345, 43)
-        Me.TextBox1.MaxLength = 30
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox1.Size = New System.Drawing.Size(311, 20)
-        Me.TextBox1.TabIndex = 7
+        Me.tbCustomerId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.tbCustomerId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCustomerId.Location = New System.Drawing.Point(345, 43)
+        Me.tbCustomerId.MaxLength = 30
+        Me.tbCustomerId.Name = "TextBox1"
+        Me.tbCustomerId.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbCustomerId.Size = New System.Drawing.Size(311, 20)
+        Me.tbCustomerId.TabIndex = 7
         '
         'TextBox2
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.TextBox2.Location = New System.Drawing.Point(345, 77)
-        Me.TextBox2.MaxLength = 50
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox2.Size = New System.Drawing.Size(311, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.tbName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbName.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.tbName.Location = New System.Drawing.Point(345, 77)
+        Me.tbName.MaxLength = 50
+        Me.tbName.Name = "TextBox2"
+        Me.tbName.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbName.Size = New System.Drawing.Size(311, 20)
+        Me.tbName.TabIndex = 8
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(345, 112)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(311, 63)
-        Me.TextBox3.TabIndex = 9
+        Me.tbCustomerAddress.Location = New System.Drawing.Point(345, 112)
+        Me.tbCustomerAddress.Multiline = True
+        Me.tbCustomerAddress.Name = "TextBox3"
+        Me.tbCustomerAddress.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.tbCustomerAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.tbCustomerAddress.Size = New System.Drawing.Size(311, 63)
+        Me.tbCustomerAddress.TabIndex = 9
         '
         'TextBox4
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.MediumAquamarine
-        Me.TextBox4.Location = New System.Drawing.Point(531, 191)
-        Me.TextBox4.MaxLength = 12
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox4.Size = New System.Drawing.Size(125, 20)
-        Me.TextBox4.TabIndex = 10
+        Me.tbContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbContact.ForeColor = System.Drawing.Color.MediumAquamarine
+        Me.tbContact.Location = New System.Drawing.Point(531, 191)
+        Me.tbContact.MaxLength = 12
+        Me.tbContact.Name = "TextBox4"
+        Me.tbContact.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tbContact.Size = New System.Drawing.Size(125, 20)
+        Me.tbContact.TabIndex = 10
         '
         'TextBox5
         '
@@ -170,21 +170,21 @@ Partial Class AddCustomer
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(345, 261)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(311, 20)
-        Me.DateTimePicker1.TabIndex = 12
+        Me.dtpActivationDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpActivationDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpActivationDate.Location = New System.Drawing.Point(345, 261)
+        Me.dtpActivationDate.Name = "DateTimePicker1"
+        Me.dtpActivationDate.Size = New System.Drawing.Size(311, 20)
+        Me.dtpActivationDate.TabIndex = 12
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(345, 293)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(311, 20)
-        Me.DateTimePicker2.TabIndex = 13
+        Me.dtpValidTill.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpValidTill.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpValidTill.Location = New System.Drawing.Point(345, 293)
+        Me.dtpValidTill.Name = "DateTimePicker2"
+        Me.dtpValidTill.Size = New System.Drawing.Size(311, 20)
+        Me.dtpValidTill.TabIndex = 13
         '
         'GroupBox2
         '
@@ -266,30 +266,30 @@ Partial Class AddCustomer
         '
         'ListView1
         '
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.Location = New System.Drawing.Point(23, 332)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(689, 97)
-        Me.ListView1.TabIndex = 16
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.addCustomerListView.FullRowSelect = True
+        Me.addCustomerListView.GridLines = True
+        Me.addCustomerListView.Location = New System.Drawing.Point(23, 332)
+        Me.addCustomerListView.Name = "ListView1"
+        Me.addCustomerListView.Size = New System.Drawing.Size(689, 97)
+        Me.addCustomerListView.TabIndex = 16
+        Me.addCustomerListView.UseCompatibleStateImageBehavior = False
+        Me.addCustomerListView.View = System.Windows.Forms.View.Details
         '
         'AddCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(739, 501)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.addCustomerListView)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtpValidTill)
+        Me.Controls.Add(Me.dtpActivationDate)
         Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbContact)
+        Me.Controls.Add(Me.tbCustomerAddress)
+        Me.Controls.Add(Me.tbName)
+        Me.Controls.Add(Me.tbCustomerId)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -314,13 +314,13 @@ Partial Class AddCustomer
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents tbCustomerId As System.Windows.Forms.TextBox
+    Friend WithEvents tbName As System.Windows.Forms.TextBox
+    Friend WithEvents tbCustomerAddress As System.Windows.Forms.TextBox
+    Friend WithEvents tbContact As System.Windows.Forms.TextBox
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpActivationDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpValidTill As System.Windows.Forms.DateTimePicker
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
@@ -329,5 +329,5 @@ Partial Class AddCustomer
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents addCustomerListView As System.Windows.Forms.ListView
 End Class

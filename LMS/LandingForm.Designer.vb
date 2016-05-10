@@ -64,11 +64,15 @@ Partial Class LandingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.LMS.My.Resources.Resources.background
         Me.ClientSize = New System.Drawing.Size(284, 262)
         Me.Controls.Add(Me.pbReports)
         Me.Controls.Add(Me.pbBooks)
         Me.Controls.Add(Me.pbCustomers)
+        Me.IsMdiContainer = True
+        Me.KeyPreview = True
         Me.Name = "LandingForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LandingForm"
         CType(Me.pbReports, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbBooks, System.ComponentModel.ISupportInitialize).EndInit()

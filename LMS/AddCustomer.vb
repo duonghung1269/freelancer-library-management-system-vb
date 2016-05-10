@@ -1,14 +1,14 @@
 Public Class AddCustomer
     Public NameFrm, NameTo As String
     Public curr As String = My.Settings.CurrencyS
-    Private Sub TextBox4_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox4.KeyDown
-       
+    Private Sub tbContact_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles tbContact.KeyDown
+
     End Sub
-    Private Sub TextBox4_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox4.LostFocus
-        TextBox4.Text = TextBox4.Text.Trim
+    Private Sub tbContact_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles tbContact.LostFocus
+        tbContact.Text = tbContact.Text.Trim
     End Sub
 
-    Private Sub TextBox4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox4.TextChanged
+    Private Sub tbContact_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbContact.TextChanged
 
     End Sub
 
@@ -16,13 +16,13 @@ Public Class AddCustomer
         Me.Close()
     End Sub
 
-    Private Sub TextBox2_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox2.LostFocus
-        NameFrm = TextBox2.Text
+    Private Sub tbCustomerName_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles tbName.LostFocus
+        NameFrm = tbName.Text
         Call Sentence()
-        TextBox2.Text = NameTo
+        tbName.Text = NameTo
     End Sub
 
-    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
+    Private Sub tbCustomerName_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbName.TextChanged
 
     End Sub
     Sub Sentence()
@@ -46,25 +46,25 @@ Public Class AddCustomer
         Next
     End Sub
 
-    Private Sub TextBox3_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox3.LostFocus
-        NameFrm = TextBox3.Text
+    Private Sub tbCustomerAddress_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles tbCustomerAddress.LostFocus
+        NameFrm = tbCustomerAddress.Text
         Call Sentence()
-        TextBox3.Text = NameTo
+        tbCustomerAddress.Text = NameTo
     End Sub
 
-    Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
+    Private Sub tbCustomerAddress_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbCustomerAddress.TextChanged
 
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        If TextBox1.Text = "" Then
+        If tbCustomerId.Text = "" Then
             MsgBox("Please enter a Customer ID", 0, "")
         Else
             Try
                 If objcon.State = ConnectionState.Closed Then objcon.Open()
-                com = New OleDb.OleDbCommand("INSERT INTO Customer values('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & DateTimePicker1.Text & "','" & DateTimePicker2.Text & "')", objcon)
+                com = New OleDb.OleDbCommand("INSERT INTO Customer values('" & tbCustomerId.Text & "','" & tbName.Text & "','" & tbCustomerAddress.Text & "','" & tbContact.Text & "','" & TextBox5.Text & "','" & dtpActivationDate.Text & "','" & dtpValidTill.Text & "')", objcon)
                 If com.ExecuteNonQuery() Then MsgBox("Saved Success!", 0, "")
-                ListView1.Clear()
+                addCustomerListView.Clear()
                 Call readData()
                 objcon.Close()
                 Call DisableThem()
@@ -75,20 +75,20 @@ Public Class AddCustomer
     End Sub
 
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
-        If TextBox1.Text = "" Then
+        If tbCustomerId.Text = "" Then
             MsgBox("Please enter the ID to be deleted!", 0, "")
         Else
             Try
                 objcon.Open()
-                com = New OleDb.OleDbCommand("delete from Customer where CID='" & TextBox1.Text & "'", objcon)
+                com = New OleDb.OleDbCommand("delete from Customer where CID='" & tbCustomerId.Text & "'", objcon)
                 If com.ExecuteNonQuery() Then
-                    ListView1.Clear()
+                    addCustomerListView.Clear()
                     Call readData()
                     MsgBox("Deleted Success!", 0, "")
                 Else
                     MsgBox("ID Not Found!", 0, "")
                 End If
-               
+
                 objcon.Close()
             Catch ex As Exception
                 MsgBox(ex.Message, 0, "")
@@ -97,26 +97,26 @@ Public Class AddCustomer
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Call EnableThem()
-        Call ClearField()
+        Call enableControls()
+        Call clearTextField()
     End Sub
-    Sub EnableThem()
-        TextBox1.Enabled = True
-        TextBox2.Enabled = True
-        TextBox3.Enabled = True
-        TextBox4.Enabled = True
+    Sub enableControls()
+        tbCustomerAddress.Enabled = True
+        tbName.Enabled = True
+        tbContact.Enabled = True
+        tbCustomerId.Enabled = True
         TextBox5.Enabled = True
-        DateTimePicker1.Enabled = True
-        DateTimePicker2.Enabled = True
+        dtpActivationDate.Enabled = True
+        dtpValidTill.Enabled = True
     End Sub
     Sub DisableThem()
         'TextBox1.Enabled = False
-        TextBox2.Enabled = False
-        TextBox3.Enabled = False
-        TextBox4.Enabled = False
+        tbName.Enabled = False
+        tbCustomerAddress.Enabled = False
+        tbContact.Enabled = False
         TextBox5.Enabled = False
-        DateTimePicker1.Enabled = False
-        DateTimePicker2.Enabled = False
+        dtpActivationDate.Enabled = False
+        dtpValidTill.Enabled = False
     End Sub
 
     Private Sub AddCustomer_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -124,20 +124,20 @@ Public Class AddCustomer
         Call readData()
     End Sub
     Sub readData()
-        ListView1.Columns.Add("CUSTOMER ID", 90, HorizontalAlignment.Center)
-        ListView1.Columns.Add("CUSTOMER NAME", 210, HorizontalAlignment.Center)
-        ListView1.Columns.Add("CUSTOMER ADDRESS", 130, HorizontalAlignment.Center)
-        ListView1.Columns.Add("CONTACT #", 90, HorizontalAlignment.Center)
-        ListView1.Columns.Add("SECURITY", 90, HorizontalAlignment.Center)
-        ListView1.Columns.Add("ACTIVATION DATE", 130, HorizontalAlignment.Center)
-        ListView1.Columns.Add("VALID TILL", 90, HorizontalAlignment.Center)
+        addCustomerListView.Columns.Add("CUSTOMER ID", 90, HorizontalAlignment.Center)
+        addCustomerListView.Columns.Add("CUSTOMER NAME", 210, HorizontalAlignment.Center)
+        addCustomerListView.Columns.Add("CUSTOMER ADDRESS", 130, HorizontalAlignment.Center)
+        addCustomerListView.Columns.Add("CONTACT #", 90, HorizontalAlignment.Center)
+        addCustomerListView.Columns.Add("SECURITY", 90, HorizontalAlignment.Center)
+        addCustomerListView.Columns.Add("ACTIVATION DATE", 130, HorizontalAlignment.Center)
+        addCustomerListView.Columns.Add("VALID TILL", 90, HorizontalAlignment.Center)
         Try
 
             If (objcon.State = ConnectionState.Closed) Then objcon.Open()
             com = New OleDb.OleDbCommand("SELECT * FROM Customer", objcon)
             dr = com.ExecuteReader
             While dr.Read()
-                Call adddatatolistview(ListView1, dr(0), dr(1), dr(2), dr(3), dr(4), dr(5), dr(6))
+                Call adddatatolistview(addCustomerListView, dr(0), dr(1), dr(2), dr(3), dr(4), dr(5), dr(6))
             End While
             dr.Close()
             objcon.Close()
@@ -156,30 +156,30 @@ Public Class AddCustomer
         lv.SubItems.Add(CAct)
         lv.SubItems.Add(CVal)
     End Sub
-    Sub ClearField()
-        TextBox1.Clear()
-        TextBox2.Clear()
-        TextBox3.Clear()
-        TextBox4.Clear()
+    Sub clearTextField()
+        tbCustomerId.Clear()
+        tbName.Clear()
+        tbCustomerAddress.Clear()
+        tbContact.Clear()
         TextBox5.Clear()
-        DateTimePicker1.Refresh()
-        DateTimePicker2.Refresh()
+        dtpActivationDate.Refresh()
+        dtpValidTill.Refresh()
     End Sub
     Sub LoadInto()
-        
+
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Try
             Dim i As Integer
-            For i = 0 To ListView1.Items.Count - 1
-                If ListView1.Items(i).Selected = True Then
-                    TextBox1.Text = ListView1.Items(i - 1).SubItems(0).Text
+            For i = 0 To addCustomerListView.Items.Count - 1
+                If addCustomerListView.Items(i).Selected = True Then
+                    tbCustomerId.Text = addCustomerListView.Items(i - 1).SubItems(0).Text
                     Exit For
                 End If
             Next
-            ListView1.Focus()
-            ListView1.FullRowSelect = True
+            addCustomerListView.Focus()
+            addCustomerListView.FullRowSelect = True
         Catch ex As Exception
             MsgBox(ex.Message, 0, "")
         End Try
@@ -188,49 +188,49 @@ Public Class AddCustomer
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         Try
             Dim i As Integer
-            For i = 0 To ListView1.Items.Count - 1
-                If ListView1.Items(i).Selected = True Then
-                    TextBox1.Text = ListView1.Items(i + 1).SubItems(0).Text
+            For i = 0 To addCustomerListView.Items.Count - 1
+                If addCustomerListView.Items(i).Selected = True Then
+                    tbCustomerId.Text = addCustomerListView.Items(i + 1).SubItems(0).Text
                     Exit For
                 End If
             Next
-            ListView1.Focus()
-            ListView1.FullRowSelect = True
+            addCustomerListView.Focus()
+            addCustomerListView.FullRowSelect = True
         Catch ex As Exception
             MsgBox(ex.Message, 0, "")
         End Try
     End Sub
 
-    Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged
+    Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles addCustomerListView.SelectedIndexChanged
         Dim i As Integer
-        For i = 0 To ListView1.Items.Count - 1
-            If ListView1.Items(i).Selected = True Then
-                TextBox1.Text = ListView1.Items(i).SubItems(0).Text
-                TextBox2.Text = ListView1.Items(i).SubItems(1).Text
-                TextBox3.Text = ListView1.Items(i).SubItems(2).Text
-                TextBox4.Text = ListView1.Items(i).SubItems(3).Text
-                TextBox5.Text = ListView1.Items(i).SubItems(4).Text
-                DateTimePicker1.Text = ListView1.Items(i).SubItems(5).Text
-                DateTimePicker2.Text = ListView1.Items(i).SubItems(6).Text
+        For i = 0 To addCustomerListView.Items.Count - 1
+            If addCustomerListView.Items(i).Selected = True Then
+                tbCustomerId.Text = addCustomerListView.Items(i).SubItems(0).Text
+                tbName.Text = addCustomerListView.Items(i).SubItems(1).Text
+                tbCustomerAddress.Text = addCustomerListView.Items(i).SubItems(2).Text
+                tbContact.Text = addCustomerListView.Items(i).SubItems(3).Text
+                TextBox5.Text = addCustomerListView.Items(i).SubItems(4).Text
+                dtpActivationDate.Text = addCustomerListView.Items(i).SubItems(5).Text
+                dtpValidTill.Text = addCustomerListView.Items(i).SubItems(6).Text
                 Exit For
             End If
         Next
-        ListView1.Focus()
-        ListView1.FullRowSelect = True
+        addCustomerListView.Focus()
+        addCustomerListView.FullRowSelect = True
     End Sub
 
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+    Private Sub txCustomerId_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbCustomerId.TextChanged
         Dim i As Integer
-        ListView1.SelectedItems.Clear()
-        TextBox1.Focus()
+        addCustomerListView.SelectedItems.Clear()
+        tbCustomerId.Focus()
         Try
-            If Me.TextBox1.Text = "" Then
-                TextBox2.Text = ""
+            If Me.tbCustomerId.Text = "" Then
+                tbName.Text = ""
             Else
-                For i = 0 To ListView1.Items.Count - 1
-                    If TextBox1.Text = ListView1.Items(i).SubItems(0).Text Then
-                        TextBox2.Text = ListView1.Items(i).SubItems(1).Text
-                        ListView1.Items(i).Selected = True
+                For i = 0 To addCustomerListView.Items.Count - 1
+                    If tbCustomerId.Text = addCustomerListView.Items(i).SubItems(0).Text Then
+                        tbName.Text = addCustomerListView.Items(i).SubItems(1).Text
+                        addCustomerListView.Items(i).Selected = True
                         Exit For
                     End If
                 Next

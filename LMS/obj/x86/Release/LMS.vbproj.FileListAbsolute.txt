@@ -34,3 +34,7 @@ C:\Users\Kisha Popo\Downloads\LMS_VB_v1\LMS_VB\Library management System\LMS\LMS
 C:\Users\Kisha Popo\Downloads\LMS_VB_v1\LMS_VB\Library management System\LMS\LMS\obj\x86\Release\LMS.exe
 C:\Users\Kisha Popo\Downloads\LMS_VB_v1\LMS_VB\Library management System\LMS\LMS\obj\x86\Release\LMS.pdb
 C:\Users\Kisha Popo\Downloads\LMS_VB_v1\LMS_VB\Library management System\LMS\LMS\obj\x86\Release\LMS.LandingForm.resources
+C:\Users\Kisha Popo\Downloads\LMS_VB_v1\LMS_VB\Library management System\LMS\LMS\obj\x86\Release\LMS.BooksLandingForm.resources
+C:\Users\Kisha Popo\Downloads\LMS_VB_v1\LMS_VB\Library management System\LMS\LMS\obj\x86\Release\LMS.CustomersLandingForm.resources
+C:\Users\Kisha Popo\Downloads\LMS_VB_v1\LMS_VB\Library management System\LMS\LMS\obj\x86\Release\LMS.ReportsLandingForm.resources
+C:\Users\Kisha Popo\Downloads\LMS_VB_v1\LMS_VB\Library management System\LMS\LMS\obj\x86\Release\LMS.CustomesReport.resources
